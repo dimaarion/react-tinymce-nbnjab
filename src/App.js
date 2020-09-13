@@ -21,9 +21,9 @@ class App extends React.Component {
             "image"
           ],
           toolbar:
-            "undo redo | formatselect | bold italic backcolor | \
+            "undo redo | formatselect | bold italic underline code | \
              alignleft aligncenter alignright alignjustify | \
-             bullist numlist outdent indent | removeformat | help|image"
+             bullist numlist outdent indent | removeformat | help|image|link"
         }}
         onEditorChange={this.handleEditorChange}
       />

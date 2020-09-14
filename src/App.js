@@ -2,33 +2,69 @@ import React from "react";
 import "./style.css";
 import { Editor } from "@tinymce/tinymce-react";
 
-class App extends React.Component {
-  handleEditorChange = (content = "", editor) => {
+function App (){
+ const handleEditorChange = (content = "", editor) => {
     content;
   };
 
-  render() {
+ 
     return (
       <Editor
         initialValue=""
         init={{
           height: 500,
-          menubar: false,
+          menubar: true,
           plugins: [
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table paste code help wordcount",
-            "image","mentions",
+            "image",
+            "table advtable"
           ],
           toolbar:
-            "undo redo | formatselect | bold italic underline code | \
+            "undo redo | formatselect | bold italic underline  strikethrough superscript subscript codeformat code | \
              alignleft aligncenter alignright alignjustify | \
-             bullist numlist outdent indent | removeformat | help|image|link"
+             bullist numlist outdent indent | removeformat | help|image|link|table|",
+
+          menu: {
+            file: {
+              title: "File",
+              items: "newdocument restoredraft | preview | print "
+            },
+            edit: {
+              title: "Edit",
+              items: "undo redo | cut copy paste | selectall | searchreplace"
+            },
+            view: {
+              title: "View",
+              items:
+                "code | visualaid visualchars visualblocks | spellchecker | preview fullscreen"
+            },
+            insert: {
+              title: "Insert",
+              items:
+                "image link media template codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor toc | insertdatetime"
+            },
+            format: {
+              title: "Format",
+              items:
+                "bold italic underline strikethrough superscript subscript codeformat | formats blockformats fontformats fontsizes align | forecolor backcolor | removeformat"
+            },
+            tools: {
+              title: "Tools",
+              items: "spellchecker spellcheckerlanguage | code wordcount"
+            },
+            table: {
+              title: "Table",
+              items: "inserttable | cell row column | tableprops deletetable"
+            },
+            help: { title: "Help", items: "help" }
+          }
         }}
-        onEditorChange={this.handleEditorChange}
+        onEditorChange={handleEditorChange}
       />
     );
   }
-}
+
 
 export default App;

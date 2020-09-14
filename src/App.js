@@ -7,8 +7,9 @@ function App (){
     content;
   };
 useEffect(()=>{
- let g = document.querySelector('.tox-notifications-container') 
-console.log(g + '555')
+ let g = Object.values(document.getElementsByTagName('div'))
+ .map((div)=>console.log(div.className)); 
+
 },[])
  
     return (

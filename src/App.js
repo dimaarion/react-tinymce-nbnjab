@@ -18,7 +18,7 @@ class App extends React.Component {
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table paste code help wordcount",
-            "image"
+            "image","mentions"
           ],
           toolbar:
             "undo redo | formatselect | bold italic underline code | \

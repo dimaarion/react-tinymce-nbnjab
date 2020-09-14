@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./style.css";
 import { Editor } from "@tinymce/tinymce-react";
 
@@ -6,7 +6,10 @@ function App (){
  const handleEditorChange = (content = "", editor) => {
     content;
   };
-
+useEffect(()=>{
+ let g = document.querySelector('.tox-notifications-container') 
+console.log(g + '555')
+},[])
  
     return (
       <Editor
@@ -19,12 +22,13 @@ function App (){
             "searchreplace visualblocks code fullscreen",
             "insertdatetime media table paste code help wordcount",
             "image",
-            "table advtable"
+            "table advtable",
+            "fontsizes"
           ],
           toolbar:
             "undo redo | formatselect | bold italic underline  strikethrough superscript subscript codeformat code | \
              alignleft aligncenter alignright alignjustify | \
-             bullist numlist outdent indent | removeformat | help|image|link|table|",
+             bullist numlist outdent indent | removeformat | help|image|link|table|fontsize",
 
           menu: {
             file: {

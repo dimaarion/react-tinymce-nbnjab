@@ -1,18 +1,16 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Editor } from "@tinymce/tinymce-react";
 
-function App (){
-  const [content, cetContent] = useState('')
- const handleEditorChange = (content, editor) => {
+function App() {
+  const [content, cetContent] = useState("");
+  const handleEditorChange = (content, editor) => {
     cetContent(content);
   };
-useEffect(()=>{
- 
+  useEffect(() => {}, []);
 
-},[])
- 
-    return (
+  return (
+    <div>
       <Editor
         initialValue=""
         init={{
@@ -66,11 +64,12 @@ useEffect(()=>{
             help: { title: "Help", items: "help" }
           }
         }}
-        value = {content}
+        value={content}
         onEditorChange={handleEditorChange}
       />
-    );
-  }
-
+      {content}
+    </div>
+  );
+}
 
 export default App;

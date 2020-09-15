@@ -7,7 +7,7 @@ function App() {
   const handleEditorChange = (content, editor) => {
     cetContent(content);
   };
-  useEffect(() => {}, []);
+  
 
   return (
     <div>

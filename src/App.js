@@ -8,7 +8,7 @@ function App (){
   };
 useEffect(()=>{
  let g = Object.values(document.getElementsByTagName('div'))
- .map((div)=>console.log(div.className)); 
+ .map((div)=>console.log(div)); 
 
 },[])
  
